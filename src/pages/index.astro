@@ -9,13 +9,13 @@ const latestProjects = projects
   .slice(0, 4);
 ---
 
-<Layout title="Adela Amandari - Architect & Interior Designer">
+<Layout title="Amaterra Atelier - Architect & Interior Designer">
   <div class="pt-[100px]">
     <!-- Hero Section -->
     <section class="container mx-auto px-6 py-24">
-      <div class="max-w-[667px]">
-        <div class="w-full md:w-[385px] mb-12">
-          <h1 class="font-extralight text-4xl md:text-[64px] leading-tight whitespace-pre-line">
+      <div>
+        <div class="w-full mb-12">
+          <h1 class="font-extralight text-4xl md:text-[74px] leading-tight whitespace-pre-line">
             ARCHITECT &
             INTERIOR DESIGN
             <span class="block text-xl md:text-[30px] mt-4">
@@ -24,10 +24,10 @@ const latestProjects = projects
           </h1>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-12">
+          <!-- <div>
             <h2 class="font-semibold text-[22px]">Latest Projects</h2>
-          </div>
+          </div> -->
           <div>
             <p class="font-extralight text-[16px]">
               Step into the design universe of Adela Amandari, where simplicity meets sophistication and spaces are crafted with an artful touch. I specialize in a distinctive blend of modern elegance and timeless functionality, transforming visions into tangible structures that resonate with purpose. Explore the curated collection of my work and witness the fusion of innovation and simplicity, creating environments that stand as testaments to the enduring power of well-crafted design.
@@ -39,6 +39,9 @@ const latestProjects = projects
 
     <!-- Latest Projects Section -->
     <section class="container mx-auto px-6 py-24">
+      <nav class="flex flex-col items-center py-10">
+        <h2 class="text-[30px] font-semibold dark:text-white border-b border-gray-200 dark:border-gray-800">LATEST PROJECT</h2>
+      </nav>
       {latestProjects.map((project, index) => (
         <div class={`flex flex-col md:flex-row gap-12 mb-24 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
           <div class="md:w-1/2">
