@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+// Sort projects by date in descending order and get the latest 4
+const latestProjects = projects
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 4);
+---
+
+<Layout title="Adela Amandari - Architect & Interior Designer">
+  <div class="pt-[100px]">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-24">
+      <div class="max-w-[667px]">
+        <div class="w-full md:w-[385px] mb-12">
+          <h1 class="font-extralight text-4xl md:text-[64px] leading-tight whitespace-pre-line">
+            ARCHITECT &
+            INTERIOR DESIGN
+            <span class="block text-xl md:text-[30px] mt-4">
+              Sustainability, Consciousness and Innovation
+            </span>
+          </h1>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h2 class="font-semibold text-[22px]">Latest Projects</h2>
+          </div>
+          <div>
+            <p class="font-extralight text-[16px]">
+              Step into the design universe of Adela Amandari, where simplicity meets sophistication and spaces are crafted with an artful touch. I specialize in a distinctive blend of modern elegance and timeless functionality, transforming visions into tangible structures that resonate with purpose. Explore the curated collection of my work and witness the fusion of innovation and simplicity, creating environments that stand as testaments to the enduring power of well-crafted design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Projects Section -->
+    <section class="container mx-auto px-6 py-24">
+      {latestProjects.map((project, index) => (
+        <div class={`flex flex-col md:flex-row gap-12 mb-24 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+          <div class="md:w-1/2">
+            <img
+              src={project.data.thumbnail}
+              alt={project.data.title}
+              class="w-full h-[400px] object-cover"
+            />
+          </div>
+          <div class="md:w-1/2 flex flex-col justify-center">
+            <h3 class="text-2xl font-semibold mb-4">{project.data.title}</h3>
+            <p class="font-extralight mb-6">{project.data.excerpt}</p>
+            <a
+              href={`/projects/${project.slug}`}
+              class="text-accent-light dark:text-accent-dark hover:underline"
+            >
+              View Project →
+            </a>
+          </div>
+        </div>
+      ))}
+    </section>
+  </div>
+</Layout>
