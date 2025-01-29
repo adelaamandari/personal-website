@@ -4,14 +4,14 @@ import ThemeToggle from './ThemeToggle.astro';
 
 <header class="fixed w-full bg-primary-light/90 dark:bg-primary-dark/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
   <div class="container mx-auto flex items-center justify-between h-[100px] px-6 relative z-50">
-    <div class="md:w-[512px]">
+    <div class="lg:w-[512px]">
       <a href="/" class="font-extralight text-[22px] tracking-[0.81em] leading-[1.2em] inline-block">
         AMATERRA<br />ATELIER
       </a>
     </div>
     
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex">
+    <nav class="hidden lg:flex">
       <a href="/projects" class="w-[333px] font-extralight text-[22px] hover:text-accent-light dark:hover:text-accent-dark transition-colors">
         What I Do
       </a>
@@ -19,14 +19,14 @@ import ThemeToggle from './ThemeToggle.astro';
         Who Am I
       </a>
     </nav>
-    <div class="md:flex md:w-[102px] justify-center">
+    <div class="lg:flex lg:w-[102px] justify-center">
       <ThemeToggle />
     </div>
 
     <!-- Mobile Menu Button -->
     <button
       id="menuButton"
-      class="md:hidden p-2 z-50"
+      class="lg:hidden p-2 z-50"
       aria-label="Toggle menu"
     >
       <svg
@@ -63,7 +63,7 @@ import ThemeToggle from './ThemeToggle.astro';
   <!-- Mobile Menu Overlay -->
   <div
     id="mobileMenu"
-    class="pt-[200px] hidden md:hidden z-40"
+    class="pt-[200px] hidden lg:hidden z-40"
   >
     <nav class="container mx-auto px-6 h-full flex flex-col items-center justify-center space-y-8">
       <a
