@@ -3,7 +3,7 @@ import ThemeToggle from './ThemeToggle.astro';
 ---
 
 <header class="fixed w-full bg-primary-light/90 dark:bg-primary-dark/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800">
-  <div class="container mx-auto flex items-center justify-between h-[100px] px-6">
+  <div class="container mx-auto flex items-center justify-between h-[100px] px-6 relative z-50">
     <div class="md:w-[512px]">
       <a href="/" class="font-extralight text-[22px] tracking-[0.81em] leading-[1.2em] inline-block">
         AMATERRA<br />ATELIER
@@ -19,14 +19,14 @@ import ThemeToggle from './ThemeToggle.astro';
         Who Am I
       </a>
     </nav>
-    <div class="hidden md:flex md:w-[102px] justify-center">
+    <div class="md:flex md:w-[102px] justify-center">
       <ThemeToggle />
     </div>
 
     <!-- Mobile Menu Button -->
     <button
       id="menuButton"
-      class="md:hidden p-2"
+      class="md:hidden p-2 z-50"
       aria-label="Toggle menu"
     >
       <svg
@@ -60,26 +60,33 @@ import ThemeToggle from './ThemeToggle.astro';
     </button>
   </div>
 
-  <!-- Mobile Menu -->
+  <!-- Mobile Menu Overlay -->
   <div
     id="mobileMenu"
-    class="fixed inset-0 bg-primary-light/95 dark:bg-primary-dark/95 pt-[100px] hidden md:hidden"
+    class="pt-[200px] hidden md:hidden z-40"
   >
-    <nav class="container mx-auto px-6 flex flex-col items-center space-y-8">
+    <nav class="container mx-auto px-6 h-full flex flex-col items-center justify-center space-y-8">
       <a
         href="/projects"
-        class="font-extralight text-[22px] hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+        class="font-extralight text-[22px] hover:text-accent-light dark:hover:text-accent-dark transition-colors border-b border-gray-200"
       >
         What I Do
       </a>
       <a
         href="/studio"
-        class="font-extralight text-[22px] hover:text-accent-light dark:hover:text-accent-dark transition-colors"
+        class="font-extralight text-[22px] hover:text-accent-light dark:hover:text-accent-dark transition-colors border-b border-gray-200"
       >
         Who Am I
       </a>
-      <div class="pt-4">
-        <ThemeToggle />
+      <a
+        href="/contact"
+        class="font-extralight text-[22px] hover:text-accent-light dark:hover:text-accent-dark transition-colors border-b border-gray-200"
+      >
+        Contact
+      </a>
+      <!-- This to add spacing before the border -->
+      <div class="pt-[200px]">
+        
       </div>
     </nav>
   </div>
