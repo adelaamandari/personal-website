@@ -156,49 +156,49 @@ declare module 'astro:content' {
   slug: "bobocabin-ubud";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdx"] };
 "bobodeli-dago.mdx": {
 	id: "bobodeli-dago.mdx";
   slug: "bobodeli-dago";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdx"] };
 "bobopod-thamrin.mdx": {
 	id: "bobopod-thamrin.mdx";
   slug: "bobopod-thamrin";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdx"] };
 "capsule-hotel.mdx": {
 	id: "capsule-hotel.mdx";
   slug: "capsule-hotel";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdx"] };
 "co-living-houses.mdx": {
 	id: "co-living-houses.mdx";
   slug: "co-living-houses";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdx"] };
 "urban-library.mdx": {
 	id: "urban-library.mdx";
   slug: "urban-library";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdx"] };
 "wellness-center.mdx": {
 	id: "wellness-center.mdx";
   slug: "wellness-center";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdx"] };
 };
 
@@ -210,5 +210,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = never;
 }
