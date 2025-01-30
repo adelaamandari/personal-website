@@ -16,8 +16,22 @@ export default {
           light: '#8B7355',
           dark: '#D2B48C',
         }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            'h1, h2, h3, h4, h5, h6': {
+              fontWeight: '600',
+            },
+            p: {
+              fontWeight: '200',
+            }
+          }
+        }
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<Layout title={`${project.data.title} - Adela Amandari`}>
+  <div class="pt-[100px]">
+    <article class="container mx-auto px-6 py-24">
+      <div class="max-w-4xl mx-auto">
+        <div class="aspect-[16/9] mb-8">
+          <img
+            src={project.data.thumbnail}
+            alt={project.data.title}
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="mb-8">
+          <h1 class="text-4xl font-semibold mb-4">{project.data.title}</h1>
+          <div class="flex gap-4 mb-6">
+            {project.data.tags.map(tag => (
+              <span class="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm font-extralight">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <p class="font-extralight text-lg">{project.data.excerpt}</p>
+        </div>
+
+        <div class="prose prose-lg dark:prose-invert max-w-none font-extralight">
+          <Content />
+        </div>
+      </div>
+    </article>
+  </div>
+</Layout>
