@@ -151,9 +151,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"projects": {
-"cabin-masterplan.mdx": {
-	id: "cabin-masterplan.mdx";
-  slug: "cabin-masterplan";
+"bobocabin-ubud.mdx": {
+	id: "bobocabin-ubud.mdx";
+  slug: "bobocabin-ubud";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".mdx"] };
+"bobodeli-dago.mdx": {
+	id: "bobodeli-dago.mdx";
+  slug: "bobodeli-dago";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".mdx"] };
+"bobopod-thamrin.mdx": {
+	id: "bobopod-thamrin.mdx";
+  slug: "bobopod-thamrin";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -168,13 +182,6 @@ declare module 'astro:content' {
 "co-living-houses.mdx": {
 	id: "co-living-houses.mdx";
   slug: "co-living-houses";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".mdx"] };
-"mountain-residence.mdx": {
-	id: "mountain-residence.mdx";
-  slug: "mountain-residence";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
