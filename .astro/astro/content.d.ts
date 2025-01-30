@@ -151,9 +151,9 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"projects": {
-"bobocabin-ubud.mdx": {
-	id: "bobocabin-ubud.mdx";
-  slug: "bobocabin-ubud";
+"bale-payong.mdx": {
+	id: "bale-payong.mdx";
+  slug: "bale-payong";
   body: string;
   collection: "projects";
   data: any
