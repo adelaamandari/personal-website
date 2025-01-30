@@ -151,6 +151,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"projects": {
+"bale-nyakreh.mdx": {
+	id: "bale-nyakreh.mdx";
+  slug: "bale-nyakreh";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".mdx"] };
 "bale-payong.mdx": {
 	id: "bale-payong.mdx";
   slug: "bale-payong";
@@ -189,13 +196,6 @@ declare module 'astro:content' {
 "urban-library.mdx": {
 	id: "urban-library.mdx";
   slug: "urban-library";
-  body: string;
-  collection: "projects";
-  data: any
-} & { render(): Render[".mdx"] };
-"wellness-center.mdx": {
-	id: "wellness-center.mdx";
-  slug: "wellness-center";
   body: string;
   collection: "projects";
   data: any
