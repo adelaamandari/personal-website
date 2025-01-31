@@ -165,6 +165,27 @@ declare module 'astro:content' {
   collection: "projects";
   data: any
 } & { render(): Render[".mdx"] };
+"bobocabin-cikole.mdx": {
+	id: "bobocabin-cikole.mdx";
+  slug: "bobocabin-cikole";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".mdx"] };
+"bobocabin-pangalengan.mdx": {
+	id: "bobocabin-pangalengan.mdx";
+  slug: "bobocabin-pangalengan";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".mdx"] };
+"bobocabin-ubud.mdx": {
+	id: "bobocabin-ubud.mdx";
+  slug: "bobocabin-ubud";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".mdx"] };
 "bobodeli-dago.mdx": {
 	id: "bobodeli-dago.mdx";
   slug: "bobodeli-dago";
@@ -179,23 +200,9 @@ declare module 'astro:content' {
   collection: "projects";
   data: any
 } & { render(): Render[".mdx"] };
-"capsule-hotel.mdx": {
-	id: "capsule-hotel.mdx";
-  slug: "capsule-hotel";
-  body: string;
-  collection: "projects";
-  data: any
-} & { render(): Render[".mdx"] };
-"co-living-houses.mdx": {
-	id: "co-living-houses.mdx";
-  slug: "co-living-houses";
-  body: string;
-  collection: "projects";
-  data: any
-} & { render(): Render[".mdx"] };
-"urban-library.mdx": {
-	id: "urban-library.mdx";
-  slug: "urban-library";
+"waste-for-living.mdx": {
+	id: "waste-for-living.mdx";
+  slug: "waste-for-living";
   body: string;
   collection: "projects";
   data: any
